@@ -1,13 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import Auth from '../components/Auth/Auth';
+import Home from '../components/Home/Home';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-          <button className='btn btn-danger'>Fish Store</button>
+          <Auth />
+          <Home />
       </header>
     </div>
   );
