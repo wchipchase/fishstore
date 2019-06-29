@@ -9,4 +9,4 @@ const fishShape = PropTypes.shape({
   status: PropTypes.string.isRequired,
 });
 
-export default fishShape;
+export default { fishShape };
