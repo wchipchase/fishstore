@@ -1,27 +1,24 @@
 import React from 'react';
-import 'firebase/auth';
 import PropTypes from 'prop-types';
-import OrderRow from '../OrderRow/OrderRow';
-import orderShapes from '../../helpers/propz/orderShapes';
-import './Orders.scss';
 
+import orderShapes from '../../helpers/propz/orderShapes';
+import OrderRow from '../OrderRow/OrderRow';
+
+import './Orders.scss';
 
 class Orders extends React.Component {
   static propTypes = {
     orders: PropTypes.arrayOf(orderShapes.orderShape),
     deleteOrder: PropTypes.func.isRequired,
+    selectOrderToEdit: PropTypes.func.isRequired,
   }
 
-  // componentDidMount() {
-  //   ordersData.getMyOrders(firebase.auth().currentUser.uid)
-  //     .then(orders => this.setState({ orders }))
-  //     .catch(err => console.error('can"t get orders', err));
-  // }
-
   render() {
-    const orderComponents = this.props.orders.map(order => (
-      <OrderRow key={order.id} order = {order} deleteOrder={this.props.deleteOrder}/>
+    const { orders, deleteOrder, selectOrderToEdit } = this.props;
+    const orderComponents = orders.map(order => (
+      <OrderRow key={order.id} order={order} deleteOrder={deleteOrder} selectOrderToEdit={selectOrderToEdit}/>
     ));
+
     return (
       <div className="Orders">
         <h2>Orders</h2>

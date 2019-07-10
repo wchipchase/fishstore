@@ -1,13 +1,16 @@
 import React from 'react';
 import firebase from 'firebase/app';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import MyNavbar from '../components/MyNavbar/MyNavbar';
+
 import Auth from '../components/Auth/Auth';
-import fbConnection from '../helpers/data/connections';
 import Home from '../components/Home/Home';
+import MyNavbar from '../components/MyNavbar/MyNavbar';
+
+import './App.scss';
+
+import fbConnection from '../helpers/data/connection';
 
 fbConnection();
+
 class App extends React.Component {
   state = {
     authed: false,
@@ -38,7 +41,7 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <MyNavbar authed={ authed } />
+        <MyNavbar authed={authed} />
         {loadComponent()}
       </div>
     );
