@@ -1,3 +1,15 @@
+# Fish Store
+A website for fish orders
+## Description
+This demonstrates principles of react
+
+## Getting Started
+```
+$ git clone https://github.com/wchipchase/fishstore
+```
+### Screenshots
+![fishstore](https://raw.githubusercontent.com/wchipchase/fishstore/master/src/screenshot/fishstore.JPG "Fish Store")
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
